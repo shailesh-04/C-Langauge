@@ -1,15 +1,15 @@
 																																 /*
------------------------------------------------------------------
-			 FIND MINIMUM NUMBER IN TWO NO.
------------------------------------------------------------------                                                   */
+------------------------===========================-------------------------------
+							 FIND MINIMUM NUMBER IN THREE NO.
+---------------------===============================-------------------------------                                                   */
 
 #include<stdio.h>
 #include<conio.h>
 void main()
 {
-	int a,b;
+	int a,b,c;
 	clrscr();
-	printf("\n\t\t \3\2 FIND MINIMUM NO. IN TOW NUMBER \2\3 ");
+	printf("\n\t\t \3\2 FIND MINIMUM NO. IN THREE NUMBER \2\3 ");
 
 	printf("\n\n Enter Any Number A :-");
 	scanf("%d",&a);
@@ -17,20 +17,25 @@ void main()
 	printf("\nEnter Any Number B :-");
 	scanf("%d",&b);
 
-	if(a==b)
+	printf("\nEnter Any Numbr C :-");
+	scanf("%d",&c);
+
+	if(a<c ||a<b)
 	{
-		printf("\nThis number Is Same A=B %d=%d ",a,b);
+		printf("\nThis number Is Minimum A =%d ",a);
 	}
-	else if(a<b)
+	else if(b<a|| b<c)
 	{
-		printf("\nThis Number Is Minimum A =%d ",a);
+		printf("\nThis Number Is Minimum B =%d ",b);
+	}
+	else if(c<a || c<b)
+	{
+		printf("\nThis Number Is Minimum C =%d ",c);
 	}
 	else
 	{
-		printf("\nThis Number Is Minimum B =%d ");
+		printf("\nThis Number Is Minimun Same %d =%d= %d",a,b,c);
 	}
-
-
 
 	getch();
 }
