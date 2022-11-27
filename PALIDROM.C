@@ -1,3 +1,7 @@
+/*               PALIDROME NUMBER
+              ------------------------
+DI :- 'github.com/shilesh-04   
+*/
 #include<stdio.h>
 #include<conio.h>
 void main()
