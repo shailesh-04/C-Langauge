@@ -1,0 +1,17 @@
+void Delete();
+void Menu();
+void Get_Data();
+void New_MarkSheet();
+void DataS();
+void Save_Data();
+void Put_Data();
+void Put__Data();
+void Show_Data();
+void Sem();
+void Sersch_Record();
+void Sersch();
+void Error();
+void Update_Record();
+void Sow_All_Record();
+void See_Record();
+void Show_All_MarkSheet();
