@@ -1,0 +1,91 @@
+#include<stdio.h>
+#include<conio.h>
+#define SZ 2
+//globle var
+struct student
+{
+	int roll,s1,s2,s3,total,sem;
+	char gender,name[30],city[10],gread;
+	float per;
+}s[SZ];
+void getdata()
+{
+	printf("\n\t\t\t Info Of Student Detaile\n");
+	printf("\n\n Enter STD Roll Num :-");
+	scanf("%d",&roll);
+
+	fflush(stdin);
+	printf("\n Enter STD. Name:-");
+	gets(name);
+	printf("\n Enter STD City :-");
+	gets(city);
+
+	fflush(stdin);
+	printf("\n Enter STD gender :-");
+	scanf("%c",&gender);
+	printf("\n Enter Sem :-");
+	scanf("%d",&sem);
+	printf("\n\n Enter Mark s1:-");
+	scanf("%d",&s1);
+	printf("\n Enter Makr S2 :-");
+	scanf("%d",&s2);
+	printf("\n Enter Mark s3 :-");
+	scanf("%d",&s3);
+
+}
+void find_total()
+{
+	total= s1+s2+s3;
+}
+void find_per()
+{
+		 per= (total*100)/300;
+}
+void find_gread()
+{
+	if(per<40)
+		{
+			gread='F';
+		}
+	else if(per>=40 && per<50)
+		{
+			 gread='E';
+		}
+	else if(per>=50 && per<60)
+		{
+			 gread='D';
+		}
+	else if(per>=60 && per<70)
+		{
+			gread='C';
+		}
+	else if(per>=70 && per<80)
+		{
+			gread='B';
+		}
+	else if(per>=80 && per<90)
+		{
+			gread='A';
+		}
+	else if(per>=90 && per<=100)
+		{
+			gread='O';
+		}
+}
+void put_data()
+{
+	printf("roll\t name\t city\t gendr\tsem\ts1\ts2\ts3\tper\tgred");
+	printf("\n---------------------------------------------------------------------------");
+	printf("\n%d\t%s\t%s\t%c\t%d\t%d\t%d\t%d\t%0.2f\t%c",roll,name,city,gender,sem,s1,s2,s3,per,gread);
+}
+void main()
+{
+	  clrscr();
+	  getdata();
+	  find_total();
+	  find_per();
+	  find_gread();
+	  clrscr();
+	  put_data();
+	  getch();
+}

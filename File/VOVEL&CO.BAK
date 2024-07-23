@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i;
+	char str1[20],ch;
+	FILE *fp1,*fp2,*fp3;
+
+	clrscr();
+	fp1=fopen("AllText.txt","w");
+	printf("\n\n Enter Any String :-");
+	gets(str1);
+	fputs(str1,fp1);
+	fclose(fp1);
+	fp1=fopen("AllText.txt","r");
+	fp2=fopen("Vovel.txt","w");
+	fp3=fopen("Content.txt","w");
+	do
+	{
+		fprinf(fp1,"%c",&ch);
+		if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||
+			ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+		{
+			printf("\n %c is voval",str1[i]);
+			fputc(ch,fp2);
+		}
+		else
+		{
+			printf("\n %c is constant ",str1[i]);
+			fputc(ch,fp3);
+		}
+	}while(ch!=NULL);
+	fclose(fp1);
+	fclose(fp2);
+	fclose(fp3);
+	getch();
+}
