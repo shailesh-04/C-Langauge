@@ -1,6 +1,6 @@
 																																 /*
 ------------------------===========================-------------------------------
-							 FIND MINIMUM NUMBER IN THREE NO.
+		 FIND MINIMUM NUMBER IN THREE NO.
 ---------------------===============================-------------------------------                                                   */
 
 #include<stdio.h>
@@ -20,15 +20,15 @@ void main()
 	printf("\nEnter Any Numbr C :-");
 	scanf("%d",&c);
 
-	if(a<c ||a<b)
-	{
+	if(a<c && a<b)
+	{     -
 		printf("\nThis number Is Minimum A =%d ",a);
 	}
-	else if(b<a|| b<c)
+	else if(b<a && b<c)
 	{
 		printf("\nThis Number Is Minimum B =%d ",b);
 	}
-	else if(c<a || c<b)
+	else if(c<a && c<b)
 	{
 		printf("\nThis Number Is Minimum C =%d ",c);
 	}

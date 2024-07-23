@@ -12,20 +12,18 @@ int main()
 	 printf("Enter the size of array: ");
 	 scanf("%d",&n); //Taking size of the array from user
 	 printf("Enter the array elements: ");
-	 for(i=0;i<n;++i)
+	 for(i=0;i<n;i++)
 	 {
 		  scanf("%d",&a[i]); //Taking array elements from user
 	 }
 	 for(i=1;i<n;i++)
 	 {
-		  for(j=0;j<(n-i);++j)
+		  for(j=0;j<n-1;j++)
 			{
 				if(a[j]>a[j+1]) //Bubble sort in c using array logic
 				{
 					 temp=a[j];
-
 					 a[j]=a[j+1];
-
 					 a[j+1]=temp;
 				} //end if
 			}//end iner loop

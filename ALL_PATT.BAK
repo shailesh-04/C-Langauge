@@ -1,0 +1,576 @@
+/*|                                "PATTN of LIST"                                           |
+  |-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-                                                                |
+  |*												 |*******      	                  |
+  |***		  (1)  							 |***** 	         (2)               |
+  |*****           pattn1					 |*** 	        pattn2             |
+  |*******		    					  		 |**                                |
+  |*********     								 |*                                 |
+  |_____________________________________|__________________________________|														  	 |                                  |
+  |        *                            |*********                         |
+  |      ***	    (3)						 |  *******      (4)	               |
+  |    *****		 pattn3		          |    *****      pattn4 	         |
+  |  *******                            |      ***                         |
+  |*********                     	    |        *                         |
+  |-------------------------------------|----------------------------------|
+  |	*		                        	 |******                            |
+  |    *** 			(5)	                |*     *           (6)             |
+  |   ***** 	  pattn5                 |*     *          pattn6           |
+  |  *******	      			          |*     *                           |
+  |   *****     		    	             |*     *               	         |
+  |    ***                              |*******                           |
+  |     *                               |                                  |
+  |-------------------------------------|*-----*---------------------------|
+  |*******                              |**   **                           |
+  | *****            (7)                |*** ***        (8)                |
+  |  ***           pattn7()             |*******        pattn8             |
+  |   *                                 |*** ***                           |
+  |  ***                                |**   **                           |
+  | *****                               |*     *                           |
+  |*******                              |                                  |
+  |-------------------------------------|----------------------------------|
+  | **********                          |*       *                         |
+  | ****  ****         (9)              |**     **        (a)              |
+  | ***    ***        pattn9            |***   ***       pattn10           |
+  | **      **                          |**** ****                         |
+  | **      **                          |*********                         |
+  | ***    ***                          |                                  |
+  | ****  ****                          |                                  |
+  | **********                          |                                  |
+  |-------------------------------------|-------*--------------------------|
+  |*********                            |     *  *                         |
+  |**** ****                            |    *    *          (c)           |
+  |***   ***         (b)                |   *      *        pattn12        |
+  |**     **        pattn11             |  *        *                      |
+  |*       *                            |   *     *                        |
+  |                                     |    *  *                          |
+  |-------------------------------------|-----*----------------------------|
+  | *       * * * * *                   |                                  |
+  | *       *               (d)         |                                  |
+  | *       *              pattn13      |                                  |
+  | * * * * * * * * *                   |                                  |
+  |         *       *                   |                                  |
+  |         *       *                   |                                  |
+  | * * * * *       *               	 |                                  |
+  |                                     |                                  |
+  |_____________________________________|__________________________________|_____
+
+*/
+#include<stdio.h>
+#include<conio.h>
+#include<dos.h>
+int row,i,j,k;
+
+void pattn1()
+{
+	clrscr();
+	printf("How Many Row ;-");
+	scanf("%d",&row);
+
+	for(i=1; i<=row; i++)
+	{
+		for(j=1; j<=i; j++)
+		{
+			printf(" *");
+		}
+	printf("\n");
+	}
+
+ getch();
+}
+//------------------------------------------------------------------//
+void pattn2()
+{
+	clrscr();
+	printf("How Many Row ;-");
+	scanf("%d",&row);
+
+	for(i=1; i<=row; i++)
+	{
+		for(j=row; j>=i; j--)
+		{
+			printf(" *");
+		}
+	printf("\n");
+	}
+
+ getch();
+}
+//------------------------------------------------------------------//
+
+void pattn3()
+{
+	int k;
+	clrscr();
+	printf("How Many Row ;-");
+	scanf("%d",&row);
+
+	for(i=1; i<=row; i++)
+	{
+		for(k=i; k<row; k++)
+		{
+			printf(" ");
+		}
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+
+	printf("\n");
+	}
+
+ getch();
+
+}
+//----------------------------------------------------//
+void pattn4()
+{
+	int k;
+	clrscr();
+	printf("How Many Row ;-");
+	scanf("%d",&row);
+
+	for(i=1; i<=row; i++)
+	{
+		for(k=1; k<i; k++)
+		{
+			printf(" ");
+		}
+		for(j=i;j<=row;j++)
+		{
+			 printf("*");
+		}
+	printf("\n");
+	}
+
+ getch();
+}
+//------------------------------------------------------------------//
+void pattn5()
+{
+	int k;
+	clrscr();
+	printf("How Many Row ;-");
+	scanf("%d",&row);
+
+	for(i=1; i<=row; i++)
+	{
+		for(k=i; k<row; k++)
+		{
+			printf(" ");
+		}
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	for(i=1; i<=row; i++)
+	{
+
+		for(k=1; k<i; k++)
+		{
+			printf(" ");
+		}
+		for(j=i; j<=row; j++)
+		{
+			printf("*");
+		}
+		for(j=i; j<=row; j++)
+		{
+			printf("*");
+		}
+	printf("\n");
+	}
+
+ getch();
+
+}
+//------------------------------------------------------------------//
+void pattn6()
+{
+	clrscr();
+	printf("Enter row colom:-");
+	scanf("%d",&row);
+
+	for(i=1; i<=row; i++)
+	{
+		for(j=1; j<=row; j++)
+		{
+			if(i==row ||j==row)
+			{
+				printf("*");
+			}
+			else if(i==1||j==1)
+			{
+				printf("*");
+			}
+
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
+	}
+
+ getch();
+}
+//----------------------------------------------------------------//
+void pattn7()
+{
+	clrscr();
+	printf("Enter row colom:-");
+	scanf("%d",&row);
+
+	for(i=1; i<=row; i++)
+	{
+		for(k=1; k<i; k++)
+		{
+			printf(" ");
+		}
+		for(j=i;j<=row;j++)
+		{
+			 printf("*");
+		}
+		for(j=row; j>=i; j--)
+		{
+			printf("*");
+		}
+
+			for(j=1; j<=i; j++)        // This Loop Is Optional/\/\/\/
+		{
+			printf(" ");
+		}
+	printf("\n");
+	}
+
+	for(i=1; i<=row; i++)
+	{
+		for(k=i; k<row; k++)
+		{
+			printf(" ");
+		}
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+
+			for(j=i; j<=row; j++)    //This Loop Is Optional
+		{
+			printf(" ");
+		}
+
+	printf("\n");
+	}
+
+ getch();
+}
+//----------------------------------------------------------------//
+void pattn8()
+{
+	int i,j,r,m,l,k;
+	clrscr();
+	printf("\n Enter A Number :-");
+	scanf("%d",&r);
+
+	for(i=1; i<=r; i++)
+	{
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		for(k=i; k<=r; k++)
+		{
+			printf(" ");
+		}
+		for(l=r; l>=i; l--)
+		{
+			printf(" ");
+		}
+		for(m=1; m<=i; m++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	for(i=r; i>=1; i--)
+	{
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		for(k=i; k<=r; k++)
+		{
+			printf(" ");
+		}
+		for(l=r; l>=i; l--)
+		{
+			printf(" ");
+		}
+		for(m=1; m<=i; m++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	getch();
+}
+//--------------------------------------------------------------------------------------//
+void pattn9()
+{
+	int i,j,r,m,l,k;
+	clrscr();
+	printf("\n Enter A Number :-");
+	scanf("%d",&r);
+
+	for(i=r; i>=1; i--)
+	{
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		for(k=i; k<=r; k++)
+		{
+			printf(" ");
+		}
+		for(l=r; l>=i; l--)
+		{
+			printf(" ");
+		}
+		for(m=1; m<=i; m++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	for(i=1; i<=r; i++)
+	{
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		for(k=i; k<=r; k++)
+		{
+			printf(" ");
+		}
+		for(l=r; l>=i; l--)
+		{
+			printf(" ");
+		}
+		for(m=1; m<=i; m++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	getch();
+}
+//--------------------------------------------------------------------------------------//
+void pattn10()
+{
+	int i,j,r,m,l,k;
+	clrscr();
+	printf("\n Enter A Number :-");
+	scanf("%d",&r);
+	printf("\n");
+
+	for(i=0; i<=r; i++)
+	{
+		for(j=0; j<=i; j++)
+		{
+			printf("*");
+		}
+		for(k=i; k<=r; k++)
+		{
+			printf(" ");
+		}
+		for(l=r; l>=i; l--)
+		{
+			printf(" ");
+		}
+		for(m=0; m<=i; m++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	getch();
+}
+//--------------------------------------------------------------------------------------//
+void pattn11()
+{
+	int i,j,r,m,l,k;
+	clrscr();
+	printf("\n Enter A Number :-");
+	scanf("%d",&r);
+
+	for(i=r; i>=1; i--)
+	{
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		for(k=i; k<=r; k++)
+		{
+			printf(" ");
+		}
+		for(l=r; l>=i; l--)
+		{
+			printf(" ");
+		}
+		for(m=1; m<=i; m++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	getch();
+
+}
+//-----------------------------------------------------------------------------//
+void pattn12()
+{
+	int px,py;
+	clrscr();
+	printf("\nEnter Row :-");
+	scanf("%d",&row);
+	px=row;
+	py=row;
+	for(i=1; i<=row; i++)
+	{
+		for(j=1; j<row*2; j++)
+		{
+			if(j==px ||j==py)
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		px--;
+		py++;
+		printf("\n");
+	}
+
+	px=1;
+	py=row*2-1;
+	for(i=1; i<=row; i++)
+	{
+		for(j=1; j<row*2; j++)
+		{
+			if(j==px ||j==py)
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		px++;
+		py--;
+		printf("\n");
+	}
+
+
+
+	getch();
+}
+//----------------------------------------------------//
+pattn13()
+{
+	int r,j,i;
+	clrscr();
+	printf("\n Enter Row :-");
+	scanf("%d",&r);
+	for(i=1; i<=r; i++)
+	{
+		for(j=1; j<=r; j++)
+		{
+			  if(i==r/2+1||j==r/2+1||
+			  (i==1&&j>=r/2+1) ||
+			  (i==r&&j<=r/2)||
+			  (j==1&&i<=r/2)||
+			  (j==r&&i>=r/2+1))
+			{
+				printf(" *");
+			}
+			else
+			{
+				printf("  ");
+			}
+		}
+	  printf("\n");
+	}
+      getch();
+      return 0;
+}
+
+//--------------------------------------------------------------//
+
+void main()
+{
+	char choice;
+
+	while(1)
+	{
+	clrscr();
+	textcolor(RED);
+	cprintf("\n 0: EXIT \1\n");
+	printf("\n 1: pattn1 \1\t b: pattn11 \1");
+	printf("\n 2: pattn2 \1\t c: pattn12 \1");
+	printf("\n 3: pattn3 \1\t d: pattn13 \1");
+	printf("\n 4: pattn4 \1");
+	printf("\n 5: pattn5 \1");
+	printf("\n 6: pattn6 \1");
+	printf("\n 7: pattn7 \1");
+	printf("\n 8: pattn8 \1");
+	printf("\n 9: pattn9 \1");
+	printf("\n a: pattn10 \1");
+	printf("\n\n Enter Number Of choice pattn \1\2:-");
+		choice=getch();
+
+	switch(choice)
+	 {
+		 case'#': exit();
+		 case'1': pattn1();break;
+		 case'2': pattn2();break;
+		 case'3': pattn3();break;
+		 case'4': pattn4();break;
+		 case'5': pattn5();break;
+		 case'6': pattn6();break;
+		 case'7': pattn7();break;
+		 case'8': pattn8();break;
+		 case'9': pattn9();break;
+		 case'a':pattn10();break;
+		 case'b':pattn11();break;
+		 case'c':pattn12();break;
+		 case'd':pattn13();break;
+		 default: textcolor(RED+BLINK);for(i=1; i<=10; i++){
+				 cprintf("Invalad \1\1"); delay(10); }
+				textcolor(GREEN+BLINK);for(i=1; i<=100; i++){ cprintf("choice\1\2");  delay(10); }
+					 getch();
+					 printf("\nEnter Any Chiise \2\2");
+
+	  }
+	}
+}
+
+
+

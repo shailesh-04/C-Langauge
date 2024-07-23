@@ -3,7 +3,7 @@
 #define Enter 13
 
 int i;
-char U[]={"Admin"},P[]={"369"};
+char U[]={"shailesh"},P[]={"88499"};
 char user_name[45],password[45];
 
 void get_data()
@@ -77,7 +77,7 @@ void login()
 
 	if(strcmp(user_name,U)==0 && strcmp(password,P)==0)
 		{
-			textcolor(RED+BLINK);
+			textcolor(GREEN+BLINK);
 			gotoxy(26,8); cprintf("Correct");
 			getch();
 			get_data();
@@ -86,6 +86,7 @@ void login()
 		{
 			textcolor(RED+BLINK);
 			gotoxy(26,8); cprintf("Incorect");
+			delay(0);
 		}
 }
 void main()
